@@ -11,7 +11,7 @@ public class IfExample {
             System.out.println("C");
         }
 
-        String day="월요일"
+        String day="월요일";
         String dayType=switch (day){
             case "월요일", "화요일", "수요일", "목요일", "금요일" -> {
                 System.out.println("주말까지 화이팅");
