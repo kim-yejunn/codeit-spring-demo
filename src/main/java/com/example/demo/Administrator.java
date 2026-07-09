@@ -1,19 +1,15 @@
 package com.example.demo;
-
-import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
 import lombok.ToString;
-
 import java.time.LocalDate;
 
-@ToString(callSuper = true, includeFieldNames = false)
-@EqualsAndHashCode(callSuper = true)
-public class Administrator extends Person {
+@ToString
+public class Administrator extends Member {
     private String role;
-    private LocalDate allocateAt;
+    private LocalDate allocatedAt;
 
-    public Administrator(String name, int age, String role){
-        super(name, age);
+    public Administrator(Integer id, String name, int age, String email, String role) {
+        super(id, name, age, email);
         this.role = role;
+        this.allocatedAt = LocalDate.now();
     }
 }
