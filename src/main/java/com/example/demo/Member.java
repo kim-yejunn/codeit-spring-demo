@@ -1,31 +1,30 @@
 package com.example.demo;
 
-import lombok.*;
-import lombok.experimental.FieldDefaults;
+import lombok.Setter;
+import lombok.ToString;
 
-import java.util.List;
-
-@AllArgsConstructor
-@FieldDefaults(level = AccessLevel.PRIVATE)
-@Getter
 @ToString
+@Setter
 public class Member {
-    public static String MEMBER_TO_STRING_FORMAT = "Member(id=%s, name=%s, age=%s, email=%s)";
-
-    private Integer id;
+    private final String citizen;
     private String name;
     private int age;
-    private String email;
 
-    public String toString() {
-        return String.format(MEMBER_TO_STRING_FORMAT, this.id, this.name, this.age, this.email);
+    public Member(String citizen, String name, int age){
+        this.citizen = citizen;
+        this.name = name;
+        this.age = age;
     }
 
-    public static String toString(Member member) {
-        return String.format(MEMBER_TO_STRING_FORMAT, member.id, member.name, member.age, member.email);
+/*    public void setName(String name){
+        this.name = name;
+    }*/
+
+    public void birthday(){
+        this.age ++;
     }
 
-    public static void main(String[] args) {
-        System.out.println(Calculator.calculate(1203013));
-    }
+/*    public String toString(){
+        return this.citizen+this.name+this.age;
+    }*/
 }

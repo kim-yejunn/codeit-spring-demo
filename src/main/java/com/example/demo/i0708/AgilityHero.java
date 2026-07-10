@@ -1,6 +1,6 @@
-package com.example.demo;
+package com.example.demo.i0708;
 
-public class AgilityHero implements Hero{
+public class AgilityHero implements Hero {
 
     @Override
     public void attack() {
