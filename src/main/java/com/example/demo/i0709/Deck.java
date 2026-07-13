@@ -1,8 +1,7 @@
-package com.example.demo;
+package com.example.demo.i0709;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Random;
 
 public class Deck{
     private ArrayList<Card> cards = new ArrayList<>();

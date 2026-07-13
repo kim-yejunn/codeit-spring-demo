@@ -1,6 +1,23 @@
 package com.example.demo.i0708;
 
-public class StrengthHero implements Hero{
+import com.example.demo.BasicHeroInformation;
+import lombok.Getter;
+import lombok.ToString;
+
+import java.util.logging.Level;
+
+@ToString
+public class StrengthHero extends BasicHeroInformation {
+/*    @Getter
+    private String name;*/
+
+    public StrengthHero(String name) {
+        super(name);
+    }
+
+/*    public StrengthHero(String name){
+        this.name = name;
+    }*/
 
     @Override
     public void attack() {

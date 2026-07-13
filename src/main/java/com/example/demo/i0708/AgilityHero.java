@@ -1,6 +1,21 @@
 package com.example.demo.i0708;
 
-public class AgilityHero implements Hero {
+import com.example.demo.BasicHeroInformation;
+import lombok.Getter;
+import lombok.ToString;
+
+
+public class AgilityHero extends BasicHeroInformation {
+    public AgilityHero(String name) {
+        super(name);
+    }
+/*    @Getter
+    private String name;*/
+
+/*    public AgilityHero(String name){
+        this.name = name;
+    }*/
+
 
     @Override
     public void attack() {

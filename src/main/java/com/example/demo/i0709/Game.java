@@ -1,9 +1,7 @@
-package com.example.demo;
+package com.example.demo.i0709;
 
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
-import lombok.ToString;
 
 @NoArgsConstructor
 @AllArgsConstructor

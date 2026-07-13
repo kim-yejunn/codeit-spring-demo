@@ -1,4 +1,7 @@
 package com.example.demo.i0708;
 
-public interface Hero extends HeroAttack, HeroUltimate{
+import com.example.demo.HeroInformation;
+
+public interface Hero extends HeroAttack, HeroUltimate, HeroInformation {
+
 }
