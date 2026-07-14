@@ -5,81 +5,76 @@ import com.example.demo.i0709.Game;
 import com.example.demo.i0710.AgilityHeroRepository;
 import com.example.demo.i0710.CrudRepository;
 import com.example.demo.i0710.StrengthHeroRepository;
+import com.example.demo.studentmanagement.Student;
+import com.example.demo.studentmanagement.StudentManager;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 @SpringBootApplication
 public class DemoApplication {
     public static void main(String[] args) {
 
+        StudentManager manager = new StudentManager();
+        Scanner sc = new Scanner(System.in);
+        boolean run = true;
 
-/*        AgilityHero slark = new AgilityHero("Slark");
+        while(run) {
+            System.out.println("\\n=== 메뉴 ===");
+            System.out.println("1. 학생 등록");
+            System.out.println("2. 학생 삭제");
+            System.out.println("3. 학생 목록 보기");
+            System.out.println("4. 학생 점수 조회");
+            System.out.println("5. 종료");
+            System.out.println("선택: ");
 
-        CrudRepository<AgilityHero> cachRepository = new CacheAgilityHeroRepository(
-                new AgilityHero[]{
-                        new SuperAgilityHero(slark),
-                        new AgilityHero("Drow Ranger")
-                }
-        );
+            int menu = sc.nextInt();
+            sc.nextLine(); // 버퍼 제거
 
-        cachRepository.heroRead("Slark");
-        cachRepository.heroRead("Slark");
-        cachRepository.heroRead("HDoemd");
+            switch (menu) {
+                case 1:
+                    System.out.println("이름 입력: ");
+                    String name = sc.nextLine();
+                    System.out.println("나이 입력: ");
+                    int age = sc.nextInt();
+                    sc.nextLine();
+                    System.out.println("학번 입력: ");
+                    String studentId = sc.nextLine();
+                    System.out.println("점수 입력: ");
+                    int score = sc.nextInt();
+                    sc.nextLine();
 
-        Hero selectedHero = cachRepository.heroRead("Slark");
+                    Student newStudent = new Student(name, age, studentId);
+                    manager.addStudent(newStudent, score);
+                    break;
 
-        GameService gameService = new TwoCoinGameService(selectedHero);
-        gameService.play();*/
+                case 2:
+                    System.out.println("삭제할 학생 이름 입력: ");
+                    String delName = sc.nextLine();
+                    manager.removeStudent(delName);
+                    break;
 
-/*        MakingSinRamen sin = new MakingSinRamen();
-        sin.boiling();*/
+                case 3:
+                    manager.printAllStudents();
+                    break;
 
-/*        CrudRepository<AgilityHero> crudRepository = new AgilityHeroRepository(
-                new AgilityHero[]{
-                        new AgilityHero("Slark"),
-                        new AgilityHero("Juggernaut"),
-                        new AgilityHero("Drow Ranger")
-                });
+                case 4:
+                    System.out.println("조회할 학생 이름 입력: ");
+                    String searchName = sc.nextLine();
+                    manager.printScore(searchName);
+                    break;
 
-        CrudRepository<StrengthHero> stcrudRepository = new StrengthHeroRepository(
-                new StrengthHero[]{
-                        new StrengthHero("Slark"),
-                        new StrengthHero("Juggernaut"),
-                        new StrengthHero("Drow Ranger")
-                });
+                case 5:
+                    run = false;
+                    System.out.println("[Info] 프로그램을 종료합니다. ");
+                    break;
 
-        crudRepository.heroCreate(new AgilityHero("AAAA"));
-        crudRepository.heroDelete("Slark");
-        Hero selectedHero = crudRepository.heroRead("Slark");
+                default:
+                    System.out.println("[Error] 잘못된 입력입니다.");
 
-        GameService gameService = new TwoCoinGameService(selectedHero);
-        gameService.play();*/
-
-/*        HeroRepository heroRepository = new StrengthHeroRepository();
-        String createHero = heroRepository.heroCreate("KYJ굿");
-
-        System.out.println(createHero);
-        System.out.println(heroRepository.toString());
-
-        heroRepository.heroUpdate("KYJ굿", "KKKKKK");
-        System.out.println(heroRepository.toString());
-
-        heroRepository.heroDelete("AAA");
-        System.out.println(heroRepository.toString());*/
-
-/*      HeroRepository heroRepository = new AgilityHeroRepository();
-        Hero selectedHero = heroRepository.heroRead("Slark");
-        selectedHero.attack();
-        selectedHero.ultimate();
-
-        heroRepository = new StrengthHeroRepository();
-        selectedHero = heroRepository.heroRead("AAA");
-        selectedHero.attack();
-        selectedHero.ultimate();*/
-
-/*        PaymemtPrice pp = new PaymemtPrice("감자탕", 22000, 2500);
-
-        pp.display();*/
+            }
+        }
+        sc.close();
     }
 }
