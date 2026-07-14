@@ -1,8 +1,6 @@
 package com.example.demo.i0708;
 
-import com.example.demo.BasicHeroInformation;
-import lombok.Getter;
-import lombok.ToString;
+import com.example.demo.i0710.BasicHeroInformation;
 
 
 public class AgilityHero extends BasicHeroInformation {

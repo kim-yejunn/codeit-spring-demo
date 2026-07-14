@@ -1,4 +1,4 @@
-package com.example.demo.member;
+package com.example.demo.i0708.member;
 
 import java.util.Arrays;
 

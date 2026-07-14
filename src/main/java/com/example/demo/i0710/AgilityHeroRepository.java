@@ -1,12 +1,8 @@
-package com.example.demo;
+package com.example.demo.i0710;
 
 import com.example.demo.i0708.AgilityHero;
-import com.example.demo.i0708.Hero;
-import com.example.demo.i0708.HeroAttack;
-import com.example.demo.i0708.HeroUltimate;
-import lombok.ToString;
 
-public class AgilityHeroRepository extends BasicHeroRepository {
+public class AgilityHeroRepository extends BasicHeroRepository<AgilityHero> {
     public AgilityHeroRepository(AgilityHero[] heroes) {
         super(heroes);
     }

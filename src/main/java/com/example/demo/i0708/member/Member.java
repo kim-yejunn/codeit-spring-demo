@@ -1,4 +1,4 @@
-package com.example.demo.member;
+package com.example.demo.i0708.member;
 
 public class Member {
     protected Integer id;     // Reference Type 주소를 담는 그릇 : 객체가 담기며, NULL 이 들어갈 수 있다.

@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.i0710;
 
 public class PaymemtPrice extends OriginalPrice{
     private final static double TAX_RATE = 1.1;

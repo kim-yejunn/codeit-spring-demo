@@ -1,10 +1,7 @@
 package com.example.demo.i0708;
 
-import com.example.demo.BasicHeroInformation;
-import lombok.Getter;
+import com.example.demo.i0710.BasicHeroInformation;
 import lombok.ToString;
-
-import java.util.logging.Level;
 
 @ToString
 public class StrengthHero extends BasicHeroInformation {

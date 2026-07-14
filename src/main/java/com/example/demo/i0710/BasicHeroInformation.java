@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.i0710;
 
 import com.example.demo.i0708.Hero;
 import lombok.Getter;

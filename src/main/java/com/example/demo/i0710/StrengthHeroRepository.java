@@ -1,14 +1,9 @@
-package com.example.demo;
+package com.example.demo.i0710;
 
-import com.example.demo.i0708.AgilityHero;
-import com.example.demo.i0708.Hero;
 import com.example.demo.i0708.StrengthHero;
-import lombok.ToString;
-
-import java.util.Objects;
 
 
-public class StrengthHeroRepository extends BasicHeroRepository {
+public class StrengthHeroRepository extends BasicHeroRepository<StrengthHero> {
 
     public StrengthHeroRepository(StrengthHero[] heroes){
         super(heroes);
