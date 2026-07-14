@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.i0711;
 
 public class MakingSinRamen extends MakingRamen{
     @Override

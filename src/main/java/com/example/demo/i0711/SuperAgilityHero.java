@@ -1,7 +1,6 @@
-package com.example.demo;
+package com.example.demo.i0711;
 
 import com.example.demo.i0708.AgilityHero;
-import lombok.RequiredArgsConstructor;
 
 public class SuperAgilityHero extends AgilityHero {
     private final AgilityHero actual;

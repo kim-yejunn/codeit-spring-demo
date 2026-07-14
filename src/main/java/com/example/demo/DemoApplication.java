@@ -7,11 +7,14 @@ import com.example.demo.i0710.CrudRepository;
 import com.example.demo.i0710.StrengthHeroRepository;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.util.ArrayList;
+
 @SpringBootApplication
 public class DemoApplication {
     public static void main(String[] args) {
 
-        AgilityHero slark = new AgilityHero("Slark");
+
+/*        AgilityHero slark = new AgilityHero("Slark");
 
         CrudRepository<AgilityHero> cachRepository = new CacheAgilityHeroRepository(
                 new AgilityHero[]{
@@ -27,7 +30,7 @@ public class DemoApplication {
         Hero selectedHero = cachRepository.heroRead("Slark");
 
         GameService gameService = new TwoCoinGameService(selectedHero);
-        gameService.play();
+        gameService.play();*/
 
 /*        MakingSinRamen sin = new MakingSinRamen();
         sin.boiling();*/

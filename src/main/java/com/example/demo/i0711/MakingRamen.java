@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.i0711;
 
 public abstract class MakingRamen {
     public final void boiling(){
