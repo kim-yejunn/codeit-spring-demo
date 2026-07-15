@@ -1,22 +1,45 @@
 package com.example.demo;
 
-import com.example.demo.i0708.*;
-import com.example.demo.i0709.Game;
-import com.example.demo.i0710.AgilityHeroRepository;
-import com.example.demo.i0710.CrudRepository;
-import com.example.demo.i0710.StrengthHeroRepository;
-import com.example.demo.studentmanagement.Student;
-import com.example.demo.studentmanagement.StudentManager;
+import com.example.demo.studentmanagement.Person;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.*;
 
 @SpringBootApplication
 public class DemoApplication {
+
+/*    private static final Map<Integer, Person> people = new HashMap<>(){
+        {
+            put(1, new Person(1, "Aaron", 10));
+            put(2, new Person(2, "Baron", 12));
+            put(3, new Person(3, "Caron", 15));
+            put(4, new Person(4, "Daron", 17));
+            put(5, new Person(5, "Earon", 21));
+        }
+    };
+
+    private static Optional<Person> retrieve(int id){
+        // Optional 사용 시 내부에 값이 "있는" 상태
+        Person retrieved = people.get(id);
+
+        return Optional.ofNullable(retrieved);
+    }*/
+
     public static void main(String[] args) {
 
-        StudentManager manager = new StudentManager();
+
+/*        Optional<Person> optionalExist = retrieve(1);
+        System.out.println(optionalExist);*/
+
+
+/*        OrderController orderController = new OrderController(
+                new OrderService(new OrderRepository()),
+                new PaymentService(new OrderRepository()),
+                new DeliveryService(new OrderRepository())
+        );
+        orderController.process();*/
+
+/*        StudentManager manager = new StudentManager();
         Scanner sc = new Scanner(System.in);
         boolean run = true;
 
@@ -75,6 +98,6 @@ public class DemoApplication {
 
             }
         }
-        sc.close();
+        sc.close();*/
     }
 }

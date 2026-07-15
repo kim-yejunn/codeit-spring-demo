@@ -2,8 +2,10 @@ package com.example.demo.i0710;
 
 import com.example.demo.i0708.AgilityHero;
 
+import java.util.ArrayList;
+
 public class AgilityHeroRepository extends BasicHeroRepository<AgilityHero> {
-    public AgilityHeroRepository(AgilityHero[] heroes) {
+    public AgilityHeroRepository(ArrayList<AgilityHero> heroes) {
         super(heroes);
     }
 

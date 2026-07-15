@@ -2,10 +2,12 @@ package com.example.demo.i0710;
 
 import com.example.demo.i0708.StrengthHero;
 
+import java.util.ArrayList;
+
 
 public class StrengthHeroRepository extends BasicHeroRepository<StrengthHero> {
 
-    public StrengthHeroRepository(StrengthHero[] heroes){
+    public StrengthHeroRepository(ArrayList<StrengthHero> heroes){
         super(heroes);
     }
 
