@@ -6,6 +6,9 @@ import com.example.demo.studentmanagement.Person;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.*;
+import java.util.function.Consumer;
+import java.util.function.Predicate;
+import java.util.stream.Stream;
 
 @SpringBootApplication
 public class DemoApplication {
@@ -28,17 +31,42 @@ public class DemoApplication {
 
     public static void main(String[] args) {
         List<Player> playerList = new ArrayList<>(PLAYERS.values());
+        final int[] a = {1};
+        final int[] b ={1};
 
-
-        // 최종 연산자
         System.out.println("-- Stream.forEach --");
-        playerList.stream()
-                .forEach((player) ->{
-                    System.out.println(player);
+        Stream<Player> playerStream = playerList.stream();
+
+        Stream<Player> intermediate = playerList.stream()
+                .filter((plyaer) -> {
+                    System.out.println(">> 첫번째 중간 연산자 실행: " + a[0]);
+                    a[0]++;
+                    return plyaer.getSide().equals(Side.RADIANT);
+                })
+                .filter(player -> {
+                    System.out.println(">> 두번째 중간 연산자 실행: "+ b[0]);
+                    b[0]++;
+                    return player.getKill()>=5;
+                })
+                .filter(new Predicate<Player>() {
+                    @Override
+                    public boolean test(Player player) {
+                        System.out.println(">> 세번째 중간 연산자 실행");
+                        return player.getSide().equals(Side.RADIANT);
+                    }
                 });
-        System.out.println("-- 향상된 for --");
+
+        intermediate
+                .forEach((new Consumer<Player>() {
+                    @Override
+                    public void accept(Player player) {
+                        System.out.println(player);
+                    }
+                }));
+
+/*        System.out.println("-- 향상된 for --");
         for (Player player:playerList){
             System.out.println(player);
-        }
+        }*/
     }
 }

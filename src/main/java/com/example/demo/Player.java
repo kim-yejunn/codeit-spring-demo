@@ -4,6 +4,7 @@ import com.example.demo.i0708.Hero;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
+@Getter
 @ToString
 @RequiredArgsConstructor
 @FieldDefaults(makeFinal = true, level = AccessLevel.PRIVATE)
